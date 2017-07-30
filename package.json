@@ -1,0 +1,22 @@
+{
+  "name": "stopwatch",
+  "version": "1.0.0",
+  "description": "a stopwatch implemented with electron and react",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stopwatch",
+    "electron",
+    "react"
+  ],
+  "author": "Marc Jegel",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.6.11",
+    "electron-debug": "^1.3.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
