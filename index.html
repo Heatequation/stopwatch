@@ -4,10 +4,31 @@
           // install babel hooks in the renderer process
           require('babel-register');
       </script>
+      <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div id="title-bar">
+
+             <div id="title">Stopwatch</div>
+
+             <div id="title-bar-btns">
+
+                  <button id="min-btn">-</button>
+
+                  <button id="max-btn">+</button>
+
+                  <button id="close-btn">x</button>
+
+             </div>
+
+        </div>
+
+        <div id="content">
+        </div>
+
     <script>
       require('./script.js')
+      require('./header.js')
     </script>
   </body>
 </html>

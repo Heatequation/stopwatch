@@ -23,12 +23,15 @@ class Stopwatch extends React.Component {
 
     const start_time = +new Date();
 
-    this.setState({
+    this.setState((prev_state, props) => {
+      let new_laps2 = prev_state.time === 0 ? [0] : prev_state.laps;
+
+      return {
       buttonRLisOn: true,
       buttonSSisOn: true,
       start_time: start_time,
-      laps: [0]
-    });
+      laps: new_laps2
+    }});
     this.timerID = setInterval(() => {
       let curr_time = +new Date();
       this.setState((prev_state, props) => {
@@ -171,7 +174,7 @@ class Stopwatch extends React.Component {
 
     return (
       <div style={divStyle}>
-        <div style={topLabelStyle}>Stopwatch<hr /></div>
+        <hr />
         <div style={timeLabelStyle}>{this.msecs_to_string(this.state.time)}</div>
         <div style={buttonDivStyle}>
           <hr />
@@ -295,4 +298,4 @@ class ToggleButton extends React.Component {
   }
 }
 
-ReactDOM.render(<Stopwatch />, document.body);
+ReactDOM.render(<Stopwatch />, document.getElementById("content"));
